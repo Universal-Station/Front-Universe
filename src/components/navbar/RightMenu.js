@@ -56,9 +56,10 @@ const Wallet = () => {
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets} autoConnect>
                 <WalletModalProvider>
+                     
                 <WalletMultiButton  />
 
-                    <WalletDisconnectButton />
+                {/*<WalletDisconnectButton />*/}
                     { /* Your app's components go here, nested within the context providers. */ }
                 </WalletModalProvider>
             </WalletProvider>

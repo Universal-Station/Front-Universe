@@ -8,7 +8,7 @@ import '/home/will/Proyecto-Universe/front-universe/src/css/NavBar.css'
 
 class Navbar extends Component{
     state ={
-        current: 'mail',
+        
         visible: false
     } 
     showDrawer = () =>{
@@ -39,13 +39,16 @@ class Navbar extends Component{
                         <span className="barsBtn"></span>
                     </Button>
                     <Drawer
-                        title = "Dasic Drawer"
-                        placement="rigth"
-                        closable={false}
+                        width={155}
+                        placement="right"
+                        closable={true}
                         onClose= {this.onClose}
                         visible={this.state.visible}
+                        getContainer={false}
+                        style={{
+                            position: 'absolute',
+                          }}
                         >
-                            <leftMenu />
                             <RightMenu />
                         </Drawer>
                 </div>
