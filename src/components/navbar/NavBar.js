@@ -50,6 +50,7 @@ class Navbar extends Component{
                           }}
                         >
                             <RightMenu />
+                            <LeftMenu />
                         </Drawer>
                 </div>
             </nav>
