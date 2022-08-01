@@ -7,13 +7,8 @@ import {
     PhantomWalletAdapter,
     SlopeWalletAdapter,
     SolflareWalletAdapter,
-<<<<<<< HEAD
     SolletExtensionWalletAdapter,
     SolletWalletAdapter,
-=======
-  //  SolletExtensionWalletAdapter,
-    //SolletWalletAdapter,
->>>>>>> 8b1a6405455fc540b8fc2fa6567e9eb968fa7011
     TorusWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
 import {
@@ -25,16 +20,11 @@ import { clusterApiUrl } from '@solana/web3.js';
 import { createDefaultAuthorizationResultCache, SolanaMobileWalletAdapter } from '@solana-mobile/wallet-adapter-mobile';
 
 // Default styles that can be overridden by your app
-<<<<<<< HEAD
-require('@solana/wallet-adapter-react-ui/styles.css');
-
-const Wallet = () => {
-=======
 
 
 const Wallet = () => {
    
->>>>>>> 8b1a6405455fc540b8fc2fa6567e9eb968fa7011
+
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
     const network = WalletAdapterNetwork.Devnet;
 
@@ -56,26 +46,18 @@ const Wallet = () => {
             new SlopeWalletAdapter(),
             new SolflareWalletAdapter({ network }),
             new TorusWalletAdapter(),
-<<<<<<< HEAD
             new SolletWalletAdapter(),
             new SolletExtensionWalletAdapter({network}),
-=======
->>>>>>> 8b1a6405455fc540b8fc2fa6567e9eb968fa7011
         ],
         [network]
     );
 
     return (
         <ConnectionProvider endpoint={endpoint}>
-<<<<<<< HEAD
-            <WalletProvider wallets={wallets} >
-                <WalletModalProvider>
-                    <WalletMultiButton />
-=======
             <WalletProvider wallets={wallets} autoConnect>
                 <WalletModalProvider>
                 <WalletMultiButton  />
->>>>>>> 8b1a6405455fc540b8fc2fa6567e9eb968fa7011
+
                     <WalletDisconnectButton />
                     { /* Your app's components go here, nested within the context providers. */ }
                 </WalletModalProvider>
