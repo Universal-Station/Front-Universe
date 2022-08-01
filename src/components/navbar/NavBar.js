@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import { Drawer, Button } from "antd";
 import LeftMenu from "./LeftMenu";
+<<<<<<< HEAD
 import RightMenu from "./RightMenu";
 import '/home/will/Proyecto-Universe/front-universe/src/css/NavBar.css'
+=======
+import RightMenu from "./RightMenu.js";
+import '../../css/NavBar.css'
+>>>>>>> 8b1a6405455fc540b8fc2fa6567e9eb968fa7011
 class Navbar extends Component{
     state ={
         current: 'mail',
