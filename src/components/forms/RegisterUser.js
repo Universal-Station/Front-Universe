@@ -142,58 +142,38 @@ const residences = [
         scrollToFirstError
       >
         <Form.Item
-          name="email"
-          label="E-mail"
+          name="id"
+          label="ID"
+        >
+          <Input  disabled/>
+        </Form.Item>
+  
+        <Form.Item
+          name="names"
+          label="Names"
           rules={[
             {
-              type: 'email',
-              message: 'The input is not valid E-mail!',
-            },
-            {
               required: true,
-              message: 'Please input your E-mail!',
+              message: 'Please input your Name!'
             },
           ]}
+          hasFeedback
         >
           <Input />
         </Form.Item>
   
         <Form.Item
-          name="password"
-          label="Password"
-          rules={[
-            {
-              required: true,
-              message: 'Please input your password!',
-            },
-          ]}
-          hasFeedback
-        >
-          <Input.Password />
-        </Form.Item>
-  
-        <Form.Item
-          name="confirm"
-          label="Confirm Password"
-          dependencies={['password']}
+          name="lastname"
+          label="Last Name"
           hasFeedback
           rules={[
             {
               required: true,
               message: 'Please confirm your password!',
-            },
-            ({ getFieldValue }) => ({
-              validator(_, value) {
-                if (!value || getFieldValue('password') === value) {
-                  return Promise.resolve();
-                }
-  
-                return Promise.reject(new Error('The two passwords that you entered do not match!'));
-              },
-            }),
+            }
           ]}
         >
-          <Input.Password />
+          <Input/>
         </Form.Item>
   
         <Form.Item
@@ -242,52 +222,7 @@ const residences = [
             }}
           />
         </Form.Item>
-  
-        <Form.Item
-          name="donation"
-          label="Donation"
-          rules={[
-            {
-              required: true,
-              message: 'Please input donation amount!',
-            },
-          ]}
-        >
-          <InputNumber
-            addonAfter={suffixSelector}
-            style={{
-              width: '100%',
-            }}
-          />
-        </Form.Item>
-  
-        <Form.Item
-          name="website"
-          label="Website"
-          rules={[
-            {
-              required: true,
-              message: 'Please input website!',
-            },
-          ]}
-        >
-          <AutoComplete options={websiteOptions} onChange={onWebsiteChange} placeholder="website">
-            <Input />
-          </AutoComplete>
-        </Form.Item>
-  
-        <Form.Item
-          name="intro"
-          label="Intro"
-          rules={[
-            {
-              required: true,
-              message: 'Please input Intro',
-            },
-          ]}
-        >
-          <Input.TextArea showCount maxLength={100} />
-        </Form.Item>
+
   
         <Form.Item
           name="gender"

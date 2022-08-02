@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Drawer, Button } from "antd";
 import LeftMenu from "./LeftMenu";
 import RightMenu from "./RightMenu";
-import '/home/will/Proyecto-Universe/front-universe/src/css/NavBar.css'
+import '../../css/NavBar.css'
 
 
 
