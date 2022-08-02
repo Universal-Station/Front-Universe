@@ -1,16 +1,14 @@
 import {
-    AutoComplete,
     Button,
     Cascader,
     Checkbox,
     Col,
     Form,
     Input,
-    InputNumber,
     Row,
     Select,
   } from 'antd';
-import React, { useState } from 'react';
+
 
 import '../../css/RegisterUser.css';
 
@@ -95,37 +93,12 @@ const residences = [
             width: 70,
           }}
         >
-          <Option value="86">+86</Option>
+          <Option value="51">+51</Option>
           <Option value="87">+87</Option>
         </Select>
       </Form.Item>
     );
-    const suffixSelector = (
-      <Form.Item name="suffix" noStyle>
-        <Select
-          style={{
-            width: 70,
-          }}
-        >
-          <Option value="USD">$</Option>
-          <Option value="CNY">¥</Option>
-        </Select>
-      </Form.Item>
-    );
-    const [autoCompleteResult, setAutoCompleteResult] = useState([]);
   
-    const onWebsiteChange = (value) => {
-      if (!value) {
-        setAutoCompleteResult([]);
-      } else {
-        setAutoCompleteResult(['.com', '.org', '.net'].map((domain) => `${value}${domain}`));
-      }
-    };
-  
-    const websiteOptions = autoCompleteResult.map((website) => ({
-      label: website,
-      value: website,
-    }));
     return (
         <div className='frmregisterUser'>
 
@@ -137,7 +110,7 @@ const residences = [
         onFinish={onFinish}
         initialValues={{
           residence: ['zhejiang', 'hangzhou', 'xihu'],
-          prefix: '10',
+          prefix: '+51',
         }}
         scrollToFirstError
       >
